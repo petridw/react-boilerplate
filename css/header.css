@@ -1,7 +1,13 @@
-.header ul li {
+header ul li {
   display: inline;
 }
 
-.header ul {
+header ul {
   list-style-type: none;
+}
+
+header {
+  background: white;
+  padding: 15px 0;
+  margin: 0;
 }

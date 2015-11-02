@@ -8,24 +8,30 @@
   },
   "scripts": {
     "start": "node index.js",
-    "start-dev": "npm run watch-js & nodemon index.js",
+    "start-dev": "npm run watch-js & npm run watch-css & nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-js": "browserify src/js/app.js -o client/build/bundle.js -t [ babelify --presets [ react es2015 ] ]",
-    "watch-js": "watchify src/js/app.js -o client/build/bundle.js -t [ babelify --presets [ react es2015 ] ] -dv"
+    "build-js": "browserify src/js/app.js -t [ babelify --presets [ react es2015 ] ] | uglifyjs -mc > client/build/bundle.js",
+    "watch-js": "watchify src/js/app.js -o client/build/bundle.js -t [ babelify --presets [ react es2015 ] ] -dv",
+    "build-css": "cat css/*.css | cleancss  > client/build/bundle.css",
+    "watch-css": "catw css/*.css -o client/build/bundle.css -v",
+    "build": "npm run build-js && npm run build-css"
   },
   "author": "David Petri",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.3"
-  },
-  "devDependencies": {
     "babel-preset-es2015": "^6.0.15",
     "babel-preset-react": "^6.0.15",
     "babelify": "^7.2.0",
     "browserify": "^12.0.1",
-    "nodemon": "^1.8.1",
+    "clean-css": "^3.4.6",
+    "express": "^4.13.3",
     "react": "^0.14.1",
     "react-dom": "^0.14.1",
+    "uglify-js": "^2.5.0"
+  },
+  "devDependencies": {
+    "catw": "^1.0.1",
+    "nodemon": "^1.8.1",
     "watchify": "^3.6.0"
   }
 }
