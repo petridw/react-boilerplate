@@ -1,0 +1,11 @@
+body {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  background: gainsboro;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 10px;
+}

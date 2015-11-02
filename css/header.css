@@ -1,0 +1,7 @@
+.header ul li {
+  display: inline;
+}
+
+.header ul {
+  list-style-type: none;
+}
