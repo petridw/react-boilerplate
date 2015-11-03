@@ -10,8 +10,8 @@ var MainApp = React.createClass({
         <Header />
         <main>
           <h1>Best app ever</h1>
-          <p>Or is it?</p>
-          <h4>yep pretty much it is</h4>
+          <p>YEP P MUCH</p>
+          <p>Stop all the downloadin</p>
         </main>
         <Footer />
       </div>
