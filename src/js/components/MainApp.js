@@ -10,7 +10,7 @@ var MainApp = React.createClass({
         <Header />
         <main>
           <h1>Best app ever</h1>
-          <p>YEP P MUCH</p>
+          <p>YEP P MUCH help computa</p>
           <p>Stop all the downloadin</p>
         </main>
         <Footer />
